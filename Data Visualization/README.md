@@ -4,7 +4,7 @@
 In 1912, the ship thought to be immortal sinked in its first voyage, hitting a glacier.
 Approximately 2200 passengers were on board but data of almost 890 is captured.
 The ship had 3 Passenger Classes (I, II, III) I being most elite one and hence forth.
-Chances of Survival of Men and Women differed significantly at times.Hence, the following Analysis has been made.
+Chances of Survival of Men and Women differed significantly with Women survivors peaking the count. Also survival of passengers across different passenger classes was higher for Class 1 and hence lowering down the order.
 
 ## Data and Design ##
 The Visualization shows the chance of survival across different passenger classes and between men and women. The data points for the charts includes passenger class, gender, survival.
