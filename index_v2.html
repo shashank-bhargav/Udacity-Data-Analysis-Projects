@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <style>
+
+      h2 {
+        text-align: center;
+        color: black;
+      }
+
+      div.type_buttons {
+        position: fixed;
+        top: 120px;
+        left: 1100px;
+      }
+
+      div.type_buttons div {
+        background-color: rgb(250, 205, 125);
+        padding: 5px;
+        margin: 5px;
+      }
+
+      }
+    </style>
+
+  <script src="http://dimplejs.org/dist/dimple.v2.0.0.min.js"></script>
+    <script type="text/javascript">
+
+
+
+      function draw(data) {
+
+      //  Setting up D3.js
+
+          "use strict";
+          var margin = 300,
+              width = 1200 - margin,
+              height = 600 - margin;
+
+          // header
+          d3.select("body")
+            .append("h2")
+            .text("Titanic Survival Analysis");
+
+
+          var svg = d3.select("body")
+              .append("svg")
+              .attr("width", width + margin)
+              .attr("height", height + margin)
+              .append('g')
+              .attr('class','chart');
+
+          var button_lab = ['All Passengers','Males','Females'];
+
+      //  Setting up Dimple.js Chart
+
+          var x_list=["All Passengers"];
+
+          // update chart based of category of data
+          function update_chart(x_var,data2) {
+            var baseChart = new dimple.chart(svg, data2);
+            var x = baseChart.addCategoryAxis("x", x_var);
+            baseChart.addLegend(500, 10, 200, 80, "right");
+            baseChart.addMeasureAxis("y", "Count");
+            baseChart.addSeries("Survived", dimple.plot.bar);
+            return baseChart
+          }
+
+          function update(a1) {
+              var chart1 = svg.selectAll('*').remove();
+
+              if (a1==="All Passengers"){
+                d3.select("h2")
+                  .text("All Passengers: Survived v/s Perished");
+                var data2 = data;
+                chart1 = update_chart("Class",data2);
+                chart1.draw();
+              }
+
+              if (a1==="Males"){
+                d3.select("h2")
+                  .text("Males: Survived v/s Perished");
+                var data2 = dimple.filterData(data, "Type", 'Men');
+                chart1 = update_chart("Class",data2);
+                chart1.draw();
+              }
+
+              if (a1==="Females"){
+                d3.select("h2")
+                  .text("Females: Survived v/s Perished");
+                var data2 = dimple.filterData(data, "Type", 'Women');
+                chart1 = update_chart("Class",data2);
+                chart1.draw();
+              }
+          };
+
+          var chart_num = 0;
+          var data2 =data;
+          var Chart2 = new dimple.chart(svg, data2);
+
+          //    Add animation
+          var chart_interval = setInterval(function() {
+                  Chart2.svg.selectAll('*').remove();
+                  update(x_list[chart_num])
+                  chart_num ++ ;
+
+                  if(chart_num >= x_list.length) {
+                      clearInterval(chart_interval);
+
+          //    Add  buttons
+                      var buttons = d3.select("body")
+                        .append("div")
+                        .attr("class", "type_buttons")
+                        .selectAll("div")
+                        .data(button_lab)
+                        .enter()
+                        .append("div")
+                        .text(function(d) {
+                            return d;
+                        });
+
+
+                      buttons.on("click", function(d,plot_type) {
+                              d3.select(".type_buttons")
+                                .selectAll("div")
+                                .transition()
+                                .duration(100)
+                                .style("color", "black")
+                                .style("background", "rgb(250, 205, 125)");
+
+                              d3.select(this)
+                                .transition()
+                                .duration(100)
+                                .style("background", "lightBlue")
+                                .style("color", "white");
+                               // update chart at button click
+                                update(d);
+                      });
+                  }
+              }, 100);
+        }
+
+      </script>
+  </head>
+<body>
+  <script type="text/javascript">
+  // Load data
+
+     d3.csv("train.csv", draw);
+
+  </script>
+</body>
+</html>
