@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+
+      h2 {
+        text-align: center;
+        color: black;
+
+      }
+
+      h3 {
+        text-align: center;
+        color: black;
+      }
+
+      div.type_buttons {
+        position: absolute;;
+        top: 250px;
+        left: 920px;
+      }
+
+      div.type_buttons div {
+        background-color: rgb(251, 201, 127);
+        padding: 3px;
+        margin: 7px;
+      }
+
+      div.type_buttons2 {
+        position: absolute;;
+        top: 360px;
+        left: 920px;
+      }
+
+      div.type_buttons2 div {
+        background-color: rgb(255, 182, 193);
+        padding: 3px;
+        margin: 7px;
+      }
+
+      p {
+        margin: 20px;
+      }
+    </style>
+
+  <script src="http://dimplejs.org/dist/dimple.v2.0.0.min.js"></script>
+    <script type="text/javascript">
+
+ function draw(data) {
+
+        //    Setting up d3.js
+
+          "use strict";
+          var margin = 100,
+              width = 1000 - margin,
+              height = 500 - margin;
+
+          // header
+          d3.select("body")
+            .append("h2")
+            .text("Stats Reveal Women and Upper Class dominated Survival at Titanic Disaster");
+
+
+          d3.select("body")
+            .append("p")
+            .text("On April 15th, 1912, the Titanic (largest ship) was set sail on her maiden voyage and also the ultimate one.The Titanic hit a Glacier and sank with 2224 passengers and crew aboard over 1500 died.First class passengers were far more likely to survive as compared to other classes.Women were likely to survive than men.Dataset obtrained from https://www.kaggle.com/c/titanic")
+
+            d3.select("body")
+              .append("h3")
+              .text("All Passengers");
+
+          var svg = d3.select("body")
+              .append("svg")
+              .attr("width", width + margin)
+              .attr("height", height + margin)
+              .append('g')
+              .attr('class','chart');
+
+          var button1 = ['All Passengers','Men','Women'];
+          var button2 = ['Count','Percentage'];
+
+      // Setting up Dimple.js
+
+          // update chart when button 1 are clicked
+          function update_which_group(wg,ct) {
+              create_chart(wg,ct)
+              return wg
+          };
+
+          // update chart when button 2 are clicked
+          function update_chart_type(ct,wg) {
+                create_chart(wg,ct)
+                return ct
+          };
+
+          // update chart which category of data to show
+          function create_chart(which_group,plot_type){
+                var chart1 = svg.selectAll('*').remove();
+
+                // filter the data based on different categories
+                if (which_group==="All Passengers"){
+                  d3.select("h3")
+                    .text("All Passengers: Survived v/s Perished"); // update the titles
+                  var data2 = data;
+                }
+
+                if (which_group==="Men"){
+                  d3.select("h3")
+                    .text("Men: Survived v/s Perished");
+                  var data2 = dimple.filterData(data, "Type", 'Men');
+                }
+
+                if (which_group==="Women"){
+                  d3.select("h3")
+                    .text("Women: Survived v/s Perished");
+                  var data2 = dimple.filterData(data, "Type", 'Women');
+                }
+
+                chart1 = update_chart("Class",plot_type,data2);
+                chart1.draw();
+          }
+
+          // update chart type absoulte value or pecentage
+          function update_chart(x_var,s_var,data2) {
+                var myChart1 = new dimple.chart(svg, data2);
+                var x = myChart1.addCategoryAxis("x", x_var);
+                x.addOrderRule(["1st","2nd","3rd"])
+                myChart1.addLegend(200, 10, 380, 20, "right");
+
+                // add y axis as count axis
+                if (s_var === 'Count') {
+                  myChart1.addMeasureAxis("y", "Count");
+                  var mySeries = myChart1.addSeries("Survived", dimple.plot.bar);
+                  mySeries.addOrderRule(["Perished","Survived"])
+                }
+                // add y axis as percentage axis
+                if (s_var === 'Percentage') {
+                  var y = myChart1.addPctAxis("y", "Count");
+                  y.title = "Percentage";
+                  var mySeries = myChart1.addSeries("Survived", dimple.plot.bar);
+                  mySeries.addOrderRule(["Perished","Survived"])
+                }
+                return myChart1
+          }
+
+          var data2 =data;
+          var chart_type = 'Count';
+          var which_group = 'All Passengers';
+          var myChart = new dimple.chart(svg, data2);
+
+          // create initial chart
+          create_chart('All Passengers','Count')
+
+          //create buttons 1
+          var buttons = d3.select("body")
+                           .append("div")
+                           .attr("class", "type_buttons")
+                           .selectAll("div")
+                           .data(button1)
+                           .enter()
+                           .append("div")
+                           .text(function(d) {
+                           return d;
+                          });
+
+          buttons.on("click", function(d) {
+                                d3.select(".type_buttons")
+                                  .selectAll("div")
+                                  .transition()
+                                  .duration(500)
+                                  .style("color", "black")
+                                  .style("background", "rgb(251, 201, 127)");
+
+                                d3.select(this)
+                                  .transition()
+                                  .duration(500)
+                                  .style("background", "lightBlue")
+                                  .style("color", "white");
+                                  // update chart when button are clicked
+                                  which_group = update_which_group(d,chart_type);
+                              });
+
+        //create buttons 2
+         var buttons2 = d3.select("body")
+                        .append("div")
+                        .attr("class", "type_buttons2")
+                        .selectAll("div")
+                        .data(button2)
+                        .enter()
+                        .append("div")
+                        .text(function(d) {
+                            return d;
+                        });
+
+          buttons2.on("click", function(d) {
+                              d3.select(".type_buttons2")
+                                .selectAll("div")
+                                .transition()
+                                .duration(500)
+                                .style("color", "black")
+                                .style("background", "rgb(255, 182, 193)");
+
+                              d3.select(this)
+                                .transition()
+                                .duration(500)
+                                .style("background", "lightBlue")
+                                .style("color", "white");
+                               // update chart when button are clicked
+                                chart_type = update_chart_type(d,which_group);
+                              });
+  }
+
+      </script>
+  </head>
+<body>
+  <script type="text/javascript">
+
+  d3.csv("train_data.csv", draw); // load data in d3.js
+
+  </script>
+</body>
+</html>
