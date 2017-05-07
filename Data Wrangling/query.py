@@ -36,15 +36,6 @@ def number_of_users_contributing_once():
                  HAVING num=1) u')
 	return result.fetchone()[0]
 
-def common_ammenities():
-	for row in cur.execute('SELECT value, COUNT(*) as num \
-            FROM nodes_tags \
-            WHERE key="amenity" \
-            GROUP BY value \
-            ORDER BY num DESC \
-            LIMIT 10'):
-		return row
-
 def biggest_religion():
 	for row in cur.execute('SELECT nodes_tags.value, COUNT(*) as num \
             FROM nodes_tags \
@@ -76,6 +67,5 @@ if __name__ == '__main__':
 	print "Number of unique users: " , number_of_unique_users()
 	print "Top contributing users: " , top_contributing_users()
 	print "Number of users contributing once: " , number_of_users_contributing_once()
-	print "Common ammenities: " , common_ammenities()
 	print "Biggest religion: " , biggest_religion()
 	print "Popular cuisines: " , popular_cuisines()
