@@ -1,0 +1,458 @@
+id,key,value,type
+16174445,capital,5,regular
+16174445,is_in,India,regular
+16174445,name,Pune,regular
+16174445,eo,Puneo,name
+16174445,gu,પુના,name
+16174445,hi,पुणे,name
+16174445,ja,プネー,name
+16174445,kn,ಪುಣೆ,name
+16174445,ko,푸네,name
+16174445,lt,Puna,name
+16174445,ml,പൂണെ,name
+16174445,mr,पुणे,name
+16174445,pl,Pune,name
+16174445,ru,Пуна,name
+16174445,ta,புனே,name
+16174445,te,పూణే,name
+16174445,zh,浦那,name
+16174445,en,Poona,old_name
+16174445,place,city,regular
+16174445,cca,a,place
+16174445,population,3115431,regular
+16174445,postal_code,411001,regular
+16174445,source,http://en.wikipedia.org/wiki/Pune,regular
+16174445,wikidata,Q1538,regular
+16174445,wikipedia,en:Pune,regular
+245644773,source,AND,regular
+245644879,source,AND,regular
+245644993,source,AND,regular
+245645059,source,AND,regular
+245645174,source,AND,regular
+245645277,source,AND,regular
+245645345,source,AND,regular
+245645411,source,AND,regular
+245645484,source,AND,regular
+245645549,source,AND,regular
+245645650,source,AND,regular
+245645748,source,AND,regular
+245645889,source,AND,regular
+245646048,source,AND,regular
+245646263,highway,traffic_signals,regular
+245646410,source,AND,regular
+245646497,source,AND,regular
+245646582,source,AND,regular
+245646663,source,AND,regular
+245646738,source,AND,regular
+245646844,source,AND,regular
+245646965,highway,traffic_signals,regular
+245647044,source,AND,regular
+245647111,source,AND,regular
+245647203,source,AND,regular
+245647285,source,AND,regular
+245647285,highway,traffic_signals,regular
+245647360,source,AND,regular
+245647470,source,AND,regular
+245647550,source,AND,regular
+245647720,source,AND,regular
+245647821,source,AND,regular
+245647882,source,AND,regular
+245647985,source,AND,regular
+245648079,source,AND,regular
+245648203,source,AND,regular
+245648369,source,AND,regular
+245648512,source,AND,regular
+245648837,source,AND,regular
+245649492,source,AND,regular
+245649896,source,AND,regular
+245650203,source,AND,regular
+245650402,source,AND,regular
+245650771,source,AND,regular
+245650934,source,AND,regular
+247660187,created_by,JOSM,regular
+247660219,created_by,JOSM,regular
+280430691,amenity,post_box,regular
+280430691,created_by,Potlatch 0.10,regular
+283152697,name,McDonald's,regular
+283152697,amenity,fast_food,regular
+283152697,cuisine,burger,regular
+315806090,ref,15,regular
+315806090,highway,motorway_junction,regular
+343302811,name,Pune University Teachers Quarters,regular
+343302811,place,locality,regular
+531363969,name,Khadki,regular
+531363969,old_name,Kirkee,regular
+531363969,place,town,regular
+531363969,wikidata,Q2234392,regular
+531363969,wikipedia,en:Khadki,regular
+670359140,railway,buffer_stop,regular
+671463284,name,West End,regular
+671463284,amenity,cinema,regular
+675628669,name,National War Memorial Southern Command,regular
+675628669,historic,memorial,regular
+761948537,name,Symbiosis Nursery School,regular
+761948537,amenity,school,regular
+865842105,name,Patio's,regular
+865842105,amenity,cafe,regular
+1065897611,name,Sai Chowk Rickshaw Stand,regular
+1065897611,amenity,taxi,regular
+1068774759,name,Dr. Nitin Joglekar's Clinic,regular
+1068774759,amenity,hospital,regular
+1223055442,name,McDonald's,regular
+1223055442,amenity,fast_food,regular
+1223055442,cuisine,american,regular
+1223055442,smoking,no,regular
+1223055442,takeaway,yes,regular
+1223055442,city,Pune,addr
+1223055442,state,Maharashtra,addr
+1223055442,street,Vitthal Rao Shivarkar Marg,addr
+1223055442,country,IN,addr
+1223055442,drive_through,no,regular
+1223055442,internet_access,no,regular
+1223055442,outdoor_seating,no,regular
+1271226856,name,ICICI Bank ATM,regular
+1271226856,amenity,atm,regular
+1271226856,operator,ICICI Bank ATM,regular
+1397074458,highway,traffic_signals,regular
+1406889756,barrier,gate,regular
+1407021502,source,AND,regular
+1416042242,city,Pune,addr
+1416042242,postcode,411006,addr
+1416042242,street,Deccan College Road,addr
+1416042242,amenity,place_of_worship,regular
+1416042242,name,Tarkeshwar,regular
+1416042242,mr,तारकेश्वर,name
+1416042242,religion,hindu,regular
+1430544721,name,Jagtap Dairy Chowk,regular
+1430544721,place,locality,regular
+1449774606,highway,traffic_signals,regular
+1534465625,name,Deccan Gymkhana Police Chowki,regular
+1534465625,source,local,regular
+1534465625,amenity,police,regular
+1534465625,mr,डेक्कन जिमखाना पोलीस चौकी,name
+1645591842,source,AND,regular
+1666439286,amenity,atm,regular
+1666439286,operator,Union Bank of India,regular
+1781323314,highway,traffic_signals,regular
+1829975077,name,Indian Oil,regular
+1829975077,amenity,fuel,regular
+1839836666,name,Kolpana Flour Mill,regular
+1839836666,man_made,watermill,regular
+2084531465,street,spine road,addr
+2084531465,housenumber,D 202,addr
+2086912281,highway,traffic_signals,regular
+2087084466,source,AND,regular
+2096194478,source,AND,regular
+2165445287,barrier,gate,regular
+2172702452,name,PCCOE,regular
+2172702452,amenity,college,regular
+2172702452,street,Sector no. 26,addr
+2181434119,natural,tree,regular
+2183543082,amenity,post_box,regular
+2183569903,atm,yes,regular
+2183569903,name,Bank Of India,regular
+2183569903,amenity,bank,regular
+2185649271,highway,traffic_signals,regular
+2204241509,source,AND,regular
+2222378911,source,AND,regular
+2222378941,source,AND,regular
+2236844165,highway,traffic_signals,regular
+2242380194,power,tower,regular
+2242380307,power,tower,regular
+2242380393,power,tower,regular
+2250561570,power,tower,regular
+2254875941,railway,buffer_stop,regular
+2254876382,railway,buffer_stop,regular
+2254876486,railway,buffer_stop,regular
+2254876691,railway,level_crossing,regular
+2258420211,man_made,water_tower,regular
+2262753994,highway,traffic_signals,regular
+2263018409,name,The Flour Works,regular
+2263018409,amenity,restaurant,regular
+2263018409,cuisine,international,regular
+2263018409,website,http://theflourworks.com/,regular
+2263018409,street,North Avenue,addr
+2263018409,postcode,411006,addr
+2263018409,housename,Nirvana Complex,addr
+2265580060,name,Tulsi Banglow,regular
+2265580060,city,Pune,addr
+2265580060,street,Patwardhan Baug Path,addr
+2265580060,postcode,411004,addr
+2265580060,housenumber,"Tulsi Banglow,",addr
+2270270792,train,yes,regular
+2270270792,public_transport,stop_position,regular
+2273735906,name,Barbeque Nation,regular
+2273735906,phone,02060600002,regular
+2273735906,amenity,restaurant,regular
+2273735906,cuisine,barbecue,regular
+2273735906,mr,बार्बेक्यू नेशन,name
+2273735906,website,http://barbeque-nation.com/,regular
+2273735906,wheelchair,limited,regular
+2273735906,street,JM Road,addr
+2273735906,postcode,411004,addr
+2273735906,opening_hours,"Mo-Su 12:00-15:00,19:00-23:00",regular
+2273735906,housename,Deccan Mall,addr
+2276710439,source,AND,regular
+2280623429,man_made,water_tower,regular
+2304486056,name,Shri Mahadev Mandir,regular
+2304486056,amenity,place_of_worship,regular
+2304486056,building,yes,regular
+2304486056,religion,hindu,regular
+2304486056,city,Pune,addr
+2304486056,postcode,411028,addr
+2304486056,housename,Mahadev Mandir,addr
+2304486056,housenumber,Kale Borate Nagar,addr
+2308947646,power,tower,regular
+2308947676,power,tower,regular
+2308947706,power,tower,regular
+2308947736,power,tower,regular
+2308947770,power,tower,regular
+2308947808,power,tower,regular
+2308947863,power,tower,regular
+2308947903,power,tower,regular
+2308947940,power,tower,regular
+2308947970,power,tower,regular
+2308948000,power,tower,regular
+2308948030,power,tower,regular
+2308948060,power,tower,regular
+2308948093,power,tower,regular
+2308948123,power,tower,regular
+2308948183,power,tower,regular
+2308948213,power,tower,regular
+2308948243,power,tower,regular
+2308948273,power,tower,regular
+2308948303,power,tower,regular
+2308948335,power,tower,regular
+2308948368,power,tower,regular
+2308948401,power,tower,regular
+2308948435,power,tower,regular
+2308948467,power,tower,regular
+2308948584,power,tower,regular
+2308948584,Mitarbeiter,111.510 (2012) [1],regular
+2308948683,power,tower,regular
+2308948759,power,tower,regular
+2308948800,power,tower,regular
+2308948840,power,tower,regular
+2308948871,power,tower,regular
+2308948905,power,tower,regular
+2308948939,power,tower,regular
+2308948972,power,tower,regular
+2308949002,power,tower,regular
+2308949080,power,tower,regular
+2308949117,power,tower,regular
+2308949150,power,tower,regular
+2308949186,power,tower,regular
+2308949227,power,tower,regular
+2308949260,power,tower,regular
+2308949295,power,tower,regular
+2308949326,power,tower,regular
+2308949359,power,tower,regular
+2308949394,power,tower,regular
+2308949427,power,tower,regular
+2308949467,power,tower,regular
+2308949503,power,tower,regular
+2308949560,power,tower,regular
+2308949607,power,tower,regular
+2308949660,power,tower,regular
+2308949707,power,tower,regular
+2308949741,power,tower,regular
+2308949816,power,tower,regular
+2308949899,power,tower,regular
+2309471438,power,tower,regular
+2309471510,power,tower,regular
+2309471549,power,tower,regular
+2309471588,power,tower,regular
+2309471636,power,tower,regular
+2309471750,power,tower,regular
+2309471792,power,tower,regular
+2309471828,power,tower,regular
+2309471865,power,tower,regular
+2309763067,power,tower,regular
+2311635337,power,tower,regular
+2319809118,home,sandeep rawal,regular
+2327920295,place,hamlet,regular
+2431689363,name,Golf Links Pvt Housing Society,regular
+2431689363,building,residential,regular
+2431689363,city,Pune,addr
+2431689363,postcode,411006,addr
+2431689363,levels,11,building
+2432308145,train,yes,regular
+2432308145,public_transport,stop_position,regular
+2432308429,railway,buffer_stop,regular
+2442951169,highway,traffic_signals,regular
+2455119449,name,Burger Barn,regular
+2455119449,amenity,fast_food,regular
+2455119449,cuisine,burger,regular
+2455119449,city,Pune,addr
+2455119449,street,Lane Number 2,addr
+2455119449,postcode,411038,addr
+2455119449,housename,Bhosale Garden,addr
+2463897146,railway,buffer_stop,regular
+2509520919,name,Alankar Police Chowki,regular
+2509520919,source,Bing,regular
+2509520919,amenity,police,regular
+2509520919,mr,अलंकार पोलिस चौकी,name
+2537620602,name,Papa John's,regular
+2537620602,amenity,restaurant,regular
+2537620602,cuisine,pizza,regular
+2537620602,mr,पापा जॉन्स,name
+2550481371,name,Mother care Diagnostic Center,regular
+2550481371,note,Mother care diagnostic Center is a leading one stop diagnostic center in Pune India.,regular
+2550481371,email,atul_sanghavi@yahoo.com,regular
+2550481371,city,Pune,addr
+2550481371,street,Alandi Road,addr
+2550481371,postcode,411015,addr
+2550481371,housename,Mahalaxmi Vihar no. 83,addr
+2550481371,bitcoin,yes,payment
+2561173070,name,Café Coffee Day,regular
+2561173070,amenity,cafe,regular
+2561173070,mr,कॅफे कॉफी डे,name
+2580387043,highway,traffic_signals,regular
+2707429517,natural,tree,regular
+2708240126,natural,tree,regular
+2708240366,natural,tree,regular
+2708240577,natural,tree,regular
+2801569152,name,Asian Melange,regular
+2801569152,amenity,restaurant,regular
+2801569152,mr,एशियन मेलॉंज,name
+2852763532,highway,turning_circle,regular
+2857582472,natural,tree,regular
+2858096479,natural,tree,regular
+2858176018,atm,yes,regular
+2858176018,name,"Bank of Maharashtra, Bajirao Path Branch",regular
+2858176018,brand,Bank of Maharashtra,regular
+2858176018,amenity,bank,regular
+2858176018,mr,"बँक ऑफ महाराष्ट्र, बाजीराव पथ शाखा",name
+2858176018,operator,Bank of Maharashtra,regular
+2864314851,bus,yes,regular
+2864314851,name,Guruganesh Nagar,regular
+2864314851,mr,गुरुगणेश नगर,name
+2864314851,public_transport,platform,regular
+2864314881,bus,yes,regular
+2864314881,name,Sonya Maruti Chowk,regular
+2864314881,mr,सोन्या मारुती चौक,name
+2864314881,public_transport,platform,regular
+2868930216,name,Sahyadri Clinic,regular
+2868930216,amenity,clinic,regular
+2868930216,mr,सह्याद्री क्लिनिक,name
+2870389536,bus,yes,regular
+2870389536,name,Kanyashala,regular
+2870389536,mr,कन्याशाळा,name
+2870389536,public_transport,platform,regular
+2977616836,power,tower,regular
+2977616866,power,tower,regular
+2983247921,power,tower,regular
+2983248069,power,tower,regular
+2983248114,power,tower,regular
+2983248160,power,tower,regular
+2983248206,power,tower,regular
+2983248245,power,tower,regular
+2983248302,power,tower,regular
+2983763263,power,tower,regular
+2983763308,power,tower,regular
+2983763398,power,tower,regular
+3238255115,access,public,regular
+3238255115,amenity,toilets,regular
+3256870786,amenity,atm,regular
+3256870786,operator,HDFC,regular
+3376049727,name,Viraaj Skoda,regular
+3376049727,shop,car,regular
+3385571866,name,Khadakwasla,regular
+3385571866,place,village,regular
+3385571866,mr,खडकवासला,name
+3547594671,name,Pul Deshpande Garden,regular
+3547594671,leisure,park,regular
+3583535426,name,ICIC Bank,regular
+3583535426,amenity,atm,regular
+3594809413,name,Shiv Parvati Gift and Toys Shoppee,regular
+3594809413,shop,toys,regular
+3657496191,name,Pandit Automotive,regular
+3657496191,shop,car,regular
+3657496191,brand,Tata Motors,regular
+3657496191,phone,02025445266,regular
+3657496191,mr,पंडित ऑटोमोटिव्ह,name
+3657496191,website,http://panditauto.com/,regular
+3698253905,name,Teerth,regular
+3698253905,tourism,apartment,regular
+3708791476,name,Paud Road Post Office,regular
+3708791476,amenity,post_office,regular
+3708791476,operator,INDIA POST,regular
+3708791476,city,Pune,addr
+3708791476,street,Paud Road,addr
+3708791476,postcode,411038,addr
+3721775728,name,Pramukh Medicals,regular
+3721775728,amenity,pharmacy,regular
+3740998863,name,Sinhagad Vikas Udyan,regular
+3740998863,leisure,park,regular
+3740998863,operator,Pune Mahanagar Palika,regular
+3754528428,name,Lake Vintage,regular
+3754528428,tourism,apartment,regular
+3754528428,description,Project by M/S Gokhale Patwardhan Co.,regular
+3810652127,power,tower,regular
+3836998960,name,Belbag Mandir,regular
+3836998960,amenity,place_of_worship,regular
+3836998960,mr,बेलबाग मंदिर,name
+3836998960,religion,hindu,regular
+3837531771,name,Marne Paan House,regular
+3837531771,shop,paan,regular
+3837531771,mr,मारणे पान हाउस,name
+3945862099,power,tower,regular
+3983895302,name,Darjeeling,regular
+3983895302,level,0,regular
+3983895302,amenity,fast_food,regular
+3983895302,cuisine,tibetan,regular
+3983895302,smoking,yes,regular
+3983895302,takeaway,yes,regular
+3983895302,city,Pune,addr
+3983895302,street,Pashan-Sus Road,addr
+3983895302,postcode,411021,addr
+3983895302,drive_through,yes,regular
+3991308548,name,Egg Bhurji,regular
+3991308548,amenity,fast_food,regular
+3991308548,cuisine,egg,regular
+3991308548,city,Pune,addr
+3991308548,street,Shivshakti Chowk,addr
+3991308548,postcode,411021,addr
+3991591625,name,Anglo Urdu Boys High School,regular
+4061013196,name,The Breakfast Cafe,regular
+4061013196,amenity,cafe,regular
+4061013196,cuisine,cafe,regular
+4082974366,name,World Trade Center,regular
+4082974366,city,Pune,addr
+4082974366,street,Kharadi,addr
+4082974366,postcode,411014,addr
+4225728290,name,morya hospital ,regular
+4225728290,amenity,hospital,regular
+4452518042,name,Papillon,regular
+4452518042,shop,beauty,regular
+4508383291,shop,jewelry,regular
+4508383291,en,Tanishq,name
+4519367791,shop,department_store,regular
+4519367791,en,Farmers' & Grocers' Neighbourhood Market,name
+4614226665,amenity,university,regular
+4614226665,level,*,indoor
+4614226665,name,Defence Institute of Advanced Technology DIAT,regular
+4614226665,website,http://www.diat.ac.in,regular
+4624928648,name,Softworld Solutions,regular
+4624928648,office,it,regular
+4641111538,natural,tree,regular
+4641111568,natural,tree,regular
+4641112840,natural,tree,regular
+4652657989,amenity,place_of_worship,regular
+4652657989,denomination,hindu,regular
+4652657989,name,Ganesh Temple,regular
+4652657989,religion,hindu,regular
+4678212192,amenity,restaurant,regular
+4678212192,en,Pure Veg,name
+4694287196,street,J. R. D. Tata Flyover,addr
+4694287196,en,Kasarwadi,name
+4694287196,shop,bookmaker,regular
+4711650608,highway,traffic_signals,regular
+4717871956,name,Vasantdada Sugar Institute Colony,regular
+4717871956,place,neighbourhood,regular
+4748355841,building,college,regular
+4748355841,levels,1,building
+4748355841,height,12,regular
+4748355841,door,yes,indoor
+4748355841,level,0,indoor
+4748355841,name,trial,regular
