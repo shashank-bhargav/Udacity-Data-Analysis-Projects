@@ -61,7 +61,7 @@ def string_case(s): # change string into titleCase except for UpperCase
         return s.title()
 
 # return the updated names
-def update_name(name, mapping):
+def update_name(name):
     name = name.split(' ')
     for i in range(len(name)):
         if name[i] in mapping:
@@ -80,5 +80,5 @@ update_street = audit(OSMFILE_sample)
 # print the updated names
 for street_type, ways in update_street.iteritems():
     for name in ways:
-        better_name = update_name(name, mapping)
+        better_name = update_name(name)
         print name, "=>", better_name
