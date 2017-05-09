@@ -17,6 +17,7 @@ import codecs
 import re
 import xml.etree.cElementTree as ET
 from unittest import TestCase
+from audit import update_name
 
 import cerberus
 import schema
