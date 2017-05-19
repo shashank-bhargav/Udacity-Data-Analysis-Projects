@@ -3,6 +3,11 @@ Red Wine Data Exploration by Shivam Bhardwaj
 What properties contributes in making of good red wine? In this project we try 
 to answer this question by exploring the red wine data set.
 
+```{r global_options, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
+```
+
+
 ```{r echo=FALSE, message=FALSE, warning=FALSE, packages}
 # Load all of the packages that you end up using in your analysis in this code
 # chunk.
@@ -146,7 +151,7 @@ redwine$rating <- ifelse(redwine$quality < 5, 'bad',
 
 redwine$rating <- ordered(redwine$rating, levels = c('bad', 'average', 'excellent'))
 summary(redwine$rating)
-qplot(redwine$rating, xlab="quality", fill = "#ffb6c1")
+ggplot(redwine, aes(rating)) + geom_bar(fill = "#ffb6c1") 
 ```
 
 # Univariate Analysis
@@ -437,7 +442,7 @@ With different colors, we can  add another dimension into the plot. There are 4 
       geom_point(alpha = 0.8, size = 1) +
       geom_smooth(method = "lm", se = FALSE,size=1)  +
   scale_color_brewer(type='seq',
-                   guide=guide_legend(title='Quality'))
+                   guide=guide_legend(title='Quality')) + theme_dark()
 
 ```
 
@@ -485,7 +490,8 @@ graphs will be needed to visualize the 4 main chemical properties.
 ggplot(aes(x = volatile.acidity, y = alcohol), data = redwine) +
       xlab("volatile acidity") + ylab("alcohol") +
   geom_smooth(method = "lm", se = FALSE,size=1)  +
-      geom_point(aes(color = rating),size=1)
+      geom_point(aes(color = rating),size=1)+
+  scale_color_brewer(type = 'seq')+ theme_dark()
 ```
 
 The same trend of alcholand volatile acidity's effect on wine qaulity can be observed.
@@ -495,7 +501,8 @@ The same trend of alcholand volatile acidity's effect on wine qaulity can be obs
 ggplot(aes(x = log_sulphates, y = citric.acid), data = redwine) +
       xlab("log sulphates") + ylab("citric acid") +
   geom_smooth(method = "lm", se = FALSE,size=1)  +
-      geom_point(aes(color =  rating),size=1)
+      geom_point(aes(color =  rating),size=1) +
+  scale_color_brewer(type = 'seq')+ theme_dark()
 ```
 
 We can see higher quality wine have higher sulphates (x-axis), higher citric acidity (y-axis).
@@ -574,14 +581,17 @@ It has many count for medium quality (grade 5, 6), but much fewer count on low (
 p1 <- ggplot(aes(x = log_sulphates, y = citric.acid), data = redwine) +
       xlab("log sulphates") + ylab("citric acid") +
   geom_smooth(method = "lm", se = FALSE,size=1)  +
-      geom_point(aes(color =  rating),size=1)
+      geom_point(aes(color =  rating),size=1) + 
+  scale_color_brewer(type = 'seq') + theme_dark()
 
 p2 <- ggplot(aes(x = volatile.acidity, y = alcohol), data = redwine) +
       xlab("volatile acidity") + ylab("alcohol") +
   geom_smooth(method = "lm", se = FALSE,size=1)  +
-      geom_point(aes(color = rating),size=1)
+      geom_point(aes(color = rating),size=1) + 
+  scale_color_brewer(type = 'seq') + theme_dark()
 
 grid.arrange(p1,p2,ncol=1)
+
 ```
 
 ### Description Two
@@ -605,7 +615,7 @@ wines are increased with increase in concentration.
 # important variable in determining bad wine.
 
 
-ggplot(aes(x = rating, y = alcohol), data = redwine) +
+p1 <- ggplot(aes(x = rating, y = alcohol), data = redwine) +
   geom_jitter( alpha = .3)  +
   geom_boxplot( alpha = .5,color = 'blue') +
   stat_summary(fun.y = median, geom = 'point', shape = 4) +
@@ -614,7 +624,7 @@ ggplot(aes(x = rating, y = alcohol), data = redwine) +
   labs(x = 'quality')
 by(redwine$alcohol, redwine$rating, summary)
 
-ggplot(aes(x = rating, y = volatile.acidity), data = redwine) +
+p2 <- ggplot(aes(x = rating, y = volatile.acidity), data = redwine) +
   geom_jitter( alpha = .3)  +
   geom_boxplot( alpha = .5,color = 'blue') +
   stat_summary(fun.y = median, geom = 'point', shape = 4) +
@@ -624,7 +634,7 @@ ggplot(aes(x = rating, y = volatile.acidity), data = redwine) +
   labs(x = 'quality')
 by(redwine$volatile.acidity, redwine$rating, summary)
 
-ggplot(aes(x = rating, y = citric.acid), data = redwine) +
+p3 <- ggplot(aes(x = rating, y = citric.acid), data = redwine) +
   geom_jitter( alpha = .3)  +
   geom_boxplot( alpha = .5,color = 'blue') +
   stat_summary(fun.y = median, geom = 'point', shape = 4) +
@@ -634,7 +644,7 @@ ggplot(aes(x = rating, y = citric.acid), data = redwine) +
   labs(x = 'quality')
 by(redwine$citric.acid, redwine$rating, summary)
 
-ggplot(aes(x = rating, y = sulphates), data = redwine) +
+p4 <- ggplot(aes(x = rating, y = sulphates), data = redwine) +
   geom_jitter( alpha = .3)  +
   geom_boxplot( alpha = .5,color = 'blue') +
   stat_summary(fun.y = median, geom = 'point', shape = 4) +
@@ -643,6 +653,8 @@ ggplot(aes(x = rating, y = sulphates), data = redwine) +
   coord_cartesian(ylim = c(0.2, 1.1)) +
   labs(x = 'quality')
 by(redwine$sulphates, redwine$rating, summary)
+
+grid.arrange(p1,p2,p3,p4,ncol = 2)
 
 ```
 
@@ -677,5 +689,8 @@ In conclusion, if you are looking for a good bottle of wine. It will most like
 have very little sweetness to it, and good amount of alchohol.
 
 ### References
-http://www.udacity.com, 
-http://en.wikipedia.org
+https://www.udacity.com
+
+https://en.wikipedia.org
+
+https://www.stackoverflow.com
