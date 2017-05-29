@@ -266,7 +266,8 @@ print "K-means with Feature Scaling:", feature_scaling_acc
 from sklearn import grid_search
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.svm import SVC
-parameters = {'n_estimators' : [5, 10, 30, 40, 50, 100,150], 'learning_rate' : [0.1, 0.5, 1, 1.5, 2, 2.5], 'algorithm' : ('SAMME', 'SAMME.R')}
+parameters = {'n_estimators' : [5, 10, 30, 40, 50, 100,150], 'learning_rate' : [0.1, 0.5, 1, 1.5, 2, 2.5],
+              'algorithm' : ('SAMME', 'SAMME.R')}
 ada_clf = AdaBoostClassifier(DecisionTreeClassifier(max_depth=8))
 adaclf = grid_search.GridSearchCV(ada_clf, parameters)
 adaclf.fit(features, labels)
