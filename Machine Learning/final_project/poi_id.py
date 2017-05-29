@@ -53,9 +53,16 @@ for point in data_out:
 plt.xlabel("salary")
 plt.ylabel("bonus")
 plt.show()
-# remove the 2 outliers
-data_dict.pop("TOTAL", 0)
-data_dict.pop("THE TRAVEL AGENCY IN THE PARK", 1)
+
+# 2.2 Function to remove outliers
+def remove_outlier(dict_object, keys):
+### removes list of outliers keys from dict object
+    for key in keys:
+        dict_object.pop(key, 0)
+
+outliers = ['TOTAL', 'THE TRAVEL AGENCY IN THE PARK', 'LOCKHART EUGENE E']
+remove_outlier(data_dict, outliers)
+
 ### Task 3: Create new feature
 ### Created a feature called poi_num_emails which is both emails from this person to
 ### a POI or emails from a POI to this person
@@ -206,8 +213,7 @@ features_train, features_test, labels_train, labels_test = \
 from sklearn.grid_search import GridSearchCV
 from sklearn.svm import SVC
 print "Fitting the classifier to the training set"
-t0 = time()
-param_grid = {
++param_grid = {
          'C': [1e3, 5e3, 1e4, 5e4, 1e5],
           'gamma': [0.0001, 0.0005, 0.001, 0.005, 0.01, 0.1],
           }
