@@ -19,7 +19,7 @@ knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
 
 # The other parameters for "message" and "warning" should also be set to FALSE
 # for other code chunks once you have verified that each plot comes out as you
-# want it to. This will clean up the flow of your report.
+# want it to. This will clean up the flow of your reportt.
 
 
 library(ggplot2)
