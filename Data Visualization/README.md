@@ -17,7 +17,7 @@ I made 3 version,V1:started with simple stacked bar comparison,then V2: addition
 * Interaction is used to one more dimension, the category of data aggregated by gender.
 ## Visual Encoding ##
 * x position: passenger class.
-* y position: number of passenger.
+* y position: number of passenger n.
 * color hue: survived-red or perished-blue(as they perished in the blue sea).
 * buttons: all passengers, males and females.
 ## Library Selection ##
