@@ -1,4 +1,4 @@
-Red Wine Data Exploration by Shivam Bhardwaj
+Red Wine Data Exploration by Shashank bhargav
 ========================================================
 What properties contributes in making of good red wine? In this project we try 
 to answer this question by exploring the red wine data set.
