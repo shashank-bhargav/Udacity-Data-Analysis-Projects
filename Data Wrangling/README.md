@@ -1,6 +1,6 @@
 # Project 3: OpenStreetMap Data Wrangling with SQL #
 
-## Name: Shivam Bhardwaj ##
+## Name: Shashank bhargav ##
 
 ### Map Area: Pune, Maharashtra, India as i have spent a lot of time in this city. ###
 
